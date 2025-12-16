@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("/IMAGES/BACKGROUND_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Jersey 15',sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("/IMAGES/BACKGROUND_3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    top: 0%;
+    transition: 1s ease;
+}
+.mask::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.05);
+}
+.start-game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease;
+}
+header{
+    height: 10vh;
+    width: 100vw;
+}
+ul{
+    list-style: none;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+}
+img{
+    width: 200px;
+    height: auto;
+}
+
+button{
+    padding: 5px 10px;
+    border: none;
+    font-size: 20px;
+    background-color: #FA003F;
+    border-radius: 5px;
+    font-family: 'Jersey 15';
+    color: white;
+}
+
+main{
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,120px);
+    grid-template-rows: repeat(3,150px);
+    gap: 10px;
+}
+.card{
+    position: relative;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: 5px;
+}
+.grid-container .active{
+    transform: rotateY(.5turn);
+}
+.card_front,.card_back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    backface-visibility: hidden;
+}
+.card_front{
+    background-image: url("/IMAGES/POKEMON_HEADING-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #FA003F;
+    border-radius: 5px;
+}
+.card_back{
+    background-color: #79DC2E;
+    transform: rotateY(.5turn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.matched{
+    pointer-events: none;
+}
+
+button{
+    color: rgb(243, 243, 83);
+}
+
+.popup{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_content{
+    background-color: rgba(245, 245, 59, 0.986);
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+#play-again{
+    margin-top: 15px;
+    cursor: pointer;
+}
+@media (max-width: 330px) {
+    .mask{
+        display: none;
+    }
+    .start-game{
+        display: none;
+    }
+    .start-game>*{
+        display: none;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(4,70px);
+        grid-template-rows: repeat(3,90px);
+    }
+    body{
+        background-size: cover;
+    }
+}

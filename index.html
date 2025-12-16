@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="/IMAGES/POKEMON_HEADING-removebg-preview.png" alt="">
+        </nav>
+    </header>
+    <main>
+        <div class="start-game" id = "start">
+            <img src="/IMAGES/POKEMON_HEADING-removebg-preview.png" alt="" style="height: 'auto'; width:600px;">
+            <div><button id="start-Game">Start-Game</button></div>
+        </div>
+        <div class="mask" id = "mask"></div>
+        <div class="grid-container" id='grid-container'>
+            <div class="card" data-value="1">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="1">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="2">
+                <div class="card_front"></div>
+                <div class="card_back">
+                </div>
+            </div>
+            <div class="card" data-value="2">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="3">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="3">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="4">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="4">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="5">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="5">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="6">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+            <div class="card" data-value="6">
+                <div class="card_front"></div>
+                <div class="card_back"></div>
+            </div>
+        </div>
+        <div><button id = "new-Game">New Game</button></div>
+        <div class="popup" id = "popup">
+            <div class="popup_content" id="popup_content">
+                <h2 id="win-text">You Won</h2>
+                <button id="play-again">Play Again</button>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
