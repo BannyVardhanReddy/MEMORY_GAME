@@ -70,9 +70,7 @@ This project helped me practice:
 ---
 
 ## 🌐 Live Demo
-
-👉 https://your-github-username.github.io/MEMORY_GAME/  
-*(Replace with your actual GitHub Pages link)*
+https://pokemon-puzzle-card-game.netlify.app/
 
 ---
 
